@@ -139,6 +139,9 @@ END MAIN
 -   AX = `1234H`
 -   BX = `1234H`
 -   RESULT = `1234H`
+### Screenshot of Result
+<img width="551" height="295" alt="image" src="https://github.com/user-attachments/assets/ea42b7ca-5507-47ea-a891-34008e5c1c89" />
+
 
 ### Explanation
 
@@ -165,8 +168,18 @@ Write an 8086 assembly language program to exchange the contents of two
 5.  Stop the program.
 
 ### Assembly Program
+``` asm
+MOV AX, 1234H
+MOV BX, 5678H
+MOV [2000H], AX
+MOV [2002H], BX
+MOV AX, [2000H]
+MOV BX, [2002H]
+MOV [2000H], BX
+MOV [2002H], AX
+HLT
+```
 
- 
 
 ### Expected Result
 
@@ -177,7 +190,7 @@ Write an 8086 assembly language program to exchange the contents of two
 
 ### Explanation
 
-  
+ This program swaps the values of two memory locations using AX and BX registers and stores the exchanged values back in memory.
 ------------------------------------------------------------------------
 
 ## Procedure
@@ -191,6 +204,8 @@ Write an 8086 assembly language program to exchange the contents of two
 7.  Record the observed results and compare them with the expected
     results.
 ## Screenshot of the results 
+<img width="425" height="392" alt="image" src="https://github.com/user-attachments/assets/461d6f8e-14fd-4248-b681-ca5d7601a9d9" />
+
 
 
 
